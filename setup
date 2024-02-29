@@ -25,3 +25,13 @@ append_if_not_exist "$BASH_PROMPT_SOURCE" "$BASHRC"
 append_if_not_exist "$ALIASES_SOURCE" "$BASHRC"
 
 echo "Updated .bashrc successfully."
+
+# Now begins installing the packages
+
+sudo apt install ninja-build gettext cmake unzip curl tmux gh
+
+# Install neovim
+git clone https://github.com/neovim/neovim
+cd neovim && make CMAKE_BUILD_TYPE=Release
+sudo make install
+
