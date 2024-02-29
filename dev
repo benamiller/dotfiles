@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+rm -rf ~/.bash_prompt
+rm -rf ~/.aliases
+
+ln -s $(pwd)/.bash_prompt ~/.bash_prompt
+ln -s $(pwd)/.aliases ~/.aliases

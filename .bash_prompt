@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+PS1="\[\e[0;93m\]\u\[\e[m\]"    # username
+PS1+=" "
+PS1+="\[\e[0;92m\]\w\[\e[m\]"    # working directory
+PS1+=" "
+PS1+="\[\e[0;96m\]\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)\[\e[m\]"    # git branch
+PS1+="$ "
+export PS1
