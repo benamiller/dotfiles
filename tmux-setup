@@ -1,3 +1,5 @@
+rm -rf /usr/local/bin/t
 ln -s $(pwd)/t /usr/local/bin/
 
+rm -rf ~/.tmux.conf
 ln -s $(pwd)/tmux.conf ~/.tmux.conf

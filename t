@@ -1,16 +1,16 @@
-#!/bin/bash
+SESSION="go"
 
-SESSIONS=("run", "edit", "git")
+# Start a new detached session 
+tmux new-session -d -s "$SESSION"
 
-# Start sessions if they don't exist
+# Rename first window to run
+tmux rename-window -t 0 'run'
 
-for SESSION in "${SESSIONS[@]}"; do
-    tmux has-session -t $SESSION 2>/dev/null
+# Create a new window for editing
+tmux new-window -t "$SESSION" -n 'edit'
 
-    if [ $? != 0 ]; then
-        tmux new-session -d -s $SESSION -c $PWD
-    fi
-done
+# Create a new window for git and commands
+tmux new-window -t "$SESSION" -n 'git'
 
-# Attach to "run" session
-tmux attach -t ${SESSIONS[0]}
+# Attach to session
+tmux attach -t "$SESSION"
