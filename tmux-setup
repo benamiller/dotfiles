@@ -1,1 +1,3 @@
 ln -s $(pwd)/t /usr/local/bin/
+
+ln -s $(pwd)/tmux.conf ~/.tmux.conf
