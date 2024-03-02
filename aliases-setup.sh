@@ -3,6 +3,9 @@
 # Remove existing symlinks
 rm -rf ~/.aliases
 
+# Create link
+ln -s $(pwd)/aliases.sh ~/.aliases
+
 ALIASES_SOURCE="source ~/.aliases"
 BASHRC="$HOME/.bashrc"
 

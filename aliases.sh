@@ -25,3 +25,6 @@ alias gd="git diff"
 alias gi="git init"
 alias gr="git remote add origin"
 alias gpu="git push -u origin main"
+
+# Test
+alias hi="pwd"
