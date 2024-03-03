@@ -9,11 +9,11 @@ if [ $? != 0 ]; then
     # Rename first window to run
     tmux rename-window -t 0 'run'
 
-    # Create a new window for editing
-    tmux new-window -t "$SESSION" -n 'edit'
-
     # Create a new window for git and commands
     tmux new-window -t "$SESSION" -n 'git'
+
+    # Create a new window for editing
+    tmux new-window -t "$SESSION" -n 'edit'
 fi
 
 # Attach to session
