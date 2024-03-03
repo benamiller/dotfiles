@@ -31,3 +31,8 @@ alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
+
+# Neovim
+alias v="nvim ."
+alias o="nvim ."
+alias n="nvim ."
