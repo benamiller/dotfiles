@@ -6,6 +6,9 @@ if [ $? != 0 ]; then
     # Start a new detached session 
     tmux new-session -d -s "$SESSION"
 
+    # Source tmux.conf
+    tmux source-file ~/.tmux.conf
+
     # Rename first window to run
     tmux rename-window -t 0 'run'
 
