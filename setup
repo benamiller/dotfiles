@@ -18,4 +18,4 @@ curl -s https://ohmyposh.dev/install.sh | bash -s
 
 sudo apt install exa
 
-
+touch ~/.bash_profile
