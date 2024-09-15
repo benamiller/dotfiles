@@ -36,3 +36,5 @@ alias lt='ls --tree'
 alias v="nvim ."
 alias o="nvim ."
 alias n="nvim ."
+
+alias tk="tmux kill-server"
