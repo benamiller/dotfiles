@@ -475,6 +475,7 @@ require("lazy").setup({
 						"--exclude",
 						".git",
 						"--hidden", -- Include hidden files in the output
+						"--no-ignore-vcs",
 					},
 				})
 			end, { desc = "[S]earch [F]iles (specific hidden)" })
