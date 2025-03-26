@@ -844,7 +844,7 @@ require("lazy").setup({
 				-- No, but seriously. Please read `:help ins-completion`, it is really good!
 				mapping = cmp.mapping.preset.insert({
 					-- Select the [n]ext item
-					["<C-n>"] = cmp.mapping.select_next_item(),
+					["<C-t>"] = cmp.mapping.select_next_item(),
 					-- Select the [p]revious item
 					["<C-r>"] = cmp.mapping.select_prev_item(),
 
@@ -1004,6 +1004,16 @@ require("lazy").setup({
 		--    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
 		--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 		--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+	},
+	{
+		"stevearc/oil.nvim",
+		opts = {},
+		config = function()
+			require("oil").setup({
+				default_file_explorer = true,
+			})
+			vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open Oil file explorer" })
+		end,
 	},
 
 	-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
