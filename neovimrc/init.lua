@@ -251,6 +251,16 @@ require("lazy").setup({
 	--    require('gitsigns').setup({ ... })
 	--
 	-- See `:help gitsigns` to understand what the configuration keys do
+
+	{
+		"stevearc/oil.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" }, -- Optional: for file icons
+		config = function()
+			require("oil").setup()
+			vim.keymap.set("n", "-", "<cmd>Oil<cr>", { desc = "Open Oil file explorer" })
+		end,
+	},
+
 	{
 		"lewis6991/gitsigns.nvim",
 		version = "v1.0.2", -- Use a known stable version
