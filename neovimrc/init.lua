@@ -251,19 +251,19 @@ require("lazy").setup({
 	--    require('gitsigns').setup({ ... })
 	--
 	-- See `:help gitsigns` to understand what the configuration keys do
-  {
-    "lewis6991/gitsigns.nvim",
-    version = "v1.0.2", -- Use a known stable version
-    opts = {
-      signs = {
-          add = { text = "+" },
-          change = { text = "~" },
-          delete = { text = "_" },
-          topdelete = { text = "‾" },
-          changedelete = { text = "~" },
-        }
-    },
-  },
+	{
+		"lewis6991/gitsigns.nvim",
+		version = "v1.0.2", -- Use a known stable version
+		opts = {
+			signs = {
+				add = { text = "+" },
+				change = { text = "~" },
+				delete = { text = "_" },
+				topdelete = { text = "‾" },
+				changedelete = { text = "~" },
+			},
+		},
+	},
 
 	{
 		"tpope/vim-fugitive",
@@ -1029,9 +1029,7 @@ require("lazy").setup({
 	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
 	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
 	-- { import = 'custom.plugins' },
-},
-
-{
+}, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
 		-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
