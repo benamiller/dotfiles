@@ -257,6 +257,25 @@ require("lazy").setup({
 		ft = { "markdown" },
 		build = "cd app && npm install",
 	},
+	{
+		"lervag/vimtex",
+		ft = "tex",
+		config = function()
+			vim.g.vimtex_view_method = "general"
+			vim.g.vimtex_view_general_viewer = "/mnt/c/Users/mrben/AppData/Local/SumatraPDF/SumatraPDF.exe"
+			vim.g.vimtex_view_general_options = "-reuse-instance -forward-search @tex @line @pdf"
+
+			vim.g.vimtex_compiler_method = "latexmk"
+			vim.g.vimtex_compiler_latexmk = {
+				build_dir = "",
+				options = {
+					"-pdf",
+					"-interaction=nonstopmode",
+					"-synctex=1",
+				},
+			}
+		end,
+	},
 
 	{
 		"stevearc/oil.nvim",
