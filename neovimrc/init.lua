@@ -509,6 +509,8 @@ require("lazy").setup({
 						"node_modules", -- Exclude node_modules
 						"--exclude",
 						".git",
+						"--exclude",
+						".zig-cache",
 						"--hidden", -- Include hidden files in the output
 						"--no-ignore-vcs",
 					},
